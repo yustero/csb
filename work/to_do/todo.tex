@@ -1,0 +1,57 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{pict2e}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage[rflt]{floatflt}
+\usepackage{graphicx,subfigure,epic,eepic}
+\usepackage[most]{tcolorbox}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\cfoot{}
+\usepackage[top=5mm,includehead,headheight=45pt,
+             left=1.5cm,bottom=2cm,right=1.5cm,headsep=0.3cm]{geometry} 
+
+%inkscapestuff
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+
+
+
+
+\title{To Do}
+\author{Vaibhav}
+
+\begin{document}
+\maketitle
+
+\section{May}
+\subsection{8th May}
+\begin{itemize}
+
+\item Simulate four networks: One node, one node with self activation, one node with self inhibition and a toggle switch. 
+
+\item Not all networks have a steady state. Find out what it means to be a steady state and which networks have a steady state. 
+
+\end{itemize}
+
+\end{document}
+

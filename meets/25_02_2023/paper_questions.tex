@@ -1,0 +1,130 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{pict2e}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage[rflt]{floatflt}
+\usepackage{graphicx,subfigure,epic,eepic}
+\usepackage[most]{tcolorbox}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\cfoot{}
+\usepackage[top=5mm,includehead,headheight=45pt,
+             left=1.5cm,bottom=2cm,right=1.5cm,headsep=0.3cm]{geometry} 
+
+%inkscapestuff
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+
+
+
+
+\title{Questions}
+\author{Vaibhav}
+
+\begin{document}
+\maketitle
+
+\section{Landscape of epithelial–mesenchymal
+plasticity as an emergent
+property of coordinated teams in
+regulatory networks
+}
+
+\begin{itemize}
+
+\item 
+
+\end{itemize}
+
+\section{Low dimensionality of phenotypic space as an emergent property of coordinated teams in biological regulatory networks}
+\begin{itemize}
+
+\item It remains elusive weather teams cna drive low dimensional dynamics of such networks? 
+What does this mean really?
+
+How can teams drive the low dimensional phenotypic 
+
+\item Recently, tripathy et al showed most of the variance in phenotypic switching is often what regulatory networks underlying binary cell fate decision systems including those of EMPT operate along.
+
+\item Are number of edges and nodes a factor in this?  Are the networks which were looked into all biological? Can we create hypothetical networks which satisfy the teams model of mutual activation and large scale inhibition and see if number of edges and nodes are a factor?
+
+\item Dimension reduction by teams
+
+	It is very intuitive that teams makes the landscape bimodal but it also reduces the dimension of it? What does it mean? Can a bimodal landscape be of a higher dimension?
+
+\item How is team strength defined? 
+
+\item What does it mean to change the kinetic parameters. 
+
+\item How is a network defined? You consider n number of edges and nodes and connect them in a certain manner taking care of the fact if they're activating or deactivating. Now to randomize this network we change one edge at a time and perform RACIPE on it and measure stable states. Therefore in this method, the identiy of network is changed by changing connections one edge at a time. 
+
+	Alternatively if RACIPE conserves activating/deactivating nature of the network which it probably should then the number of activating and deactivating nodes are an identiy of the network
+
+	What does boolean pertubations conserve and change?
+
+\item What causes hybrid states to cluster and not cluster? What dictates if there is a continuum of possible hybrid states between the extremes. If there isn't a continuum then how could we possibly determine the number of hybrid states possible?
+
+
+\item Teams try to maintain one phenotype. How does EMT occur? Also consider a stem cell, teams explains how we have just two phenotypes but how is team set into action? I.e we know that once we have teams we'll have two phenotypes but how do we form teams in the first place?
+
+\item`` In decelopmental contexts, the property of canalization is frequently oserved, where cellular pheotypes are sensitive only to a small set of specific pertubations'' 
+
+	What does this mean?
+
+\item Network randomization: Edge type is swapped between two nodes (activation to inhibition and vice versea) Why? Could swapping be consdiered between two nodes which aren't connected 
+
+
+
+\end{itemize}
+
+
+\section{Landscape of epithelial-mesenchymalplasticity as an mergent property of coordinated teams in regulatory networks}
+\begin{itemize}	
+\item The goal is to predict phenotypes based on team strength and not relying on simulations. Team strength seems to take care of only the boolean connections so does this mean the rates and stuff doesn't matter? And its only the network topology which gives the network its characteristics 
+
+\item \textbf{ Def: Steady State Frequency(SSF) } Fraction of initial conditions that converge to this given steady state.
+
+\item \textbf{ Def: Coherence } This is about local stability of of steady state. Can be estimated by fraction of ``neighbouring'' states that converge to the steady state. The calculation follows perturbation procedure. One node is perturbed at a time -> active -> inactive and vice versa. Is the node flipped back?. The number of times the original steady state is returned after such perturbations gives coherence .
+
+\item Minimum SSF is not consistent the same way as maximum SSF ( wild type networks >) 
+
+\item \textbf{ Def: Frustration: } When two nodes are connected via two contradictory edges. Eg A and B have an activating and one inhibiting link in between them. This paper defines frustration to be the case where the networks stable state has a different configuration than the connection which might mean the previous thing that is overall the network makes the connection as per steady state but there are inhibitory links which destabilize the steady state configuration. 
+
+\item Bimodality coefficient of frustration? 
+\item Coming up with algorithms to test network stability in a certain direction. 
+
+\item The paper defines something called strength on page 8. What is it really? and following that there's some analysis about team strength and some correlation matrices. I do not understand that part. 
+
+\item How is teams set into action?
+
+\item How can we ``build up'' networks and examine the evolutionary pressures which might result in such networks. 
+\end{itemize}
+\section{Emergent Properties of coulpled bistable switches}
+
+\begin{itemize}
+
+\item Preliminary reading indicates that this paper investigates how can elementary network motifs be joined together and result in larger motifs. What I now wonder is could this joining of motifs resulting in bigger motifs result in a bigger network.  Assume an undifferentiated cell clearly it doesn't have a bistable network motif as of them but eventually it gets one and assuming it is due to a network like what we're studying then it must've been set into action and come into existence. How? could it be possibly due to a cascade of joining of networks? 
+\end{itemize}
+
+
+\end{document}
+

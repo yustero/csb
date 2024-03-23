@@ -1,0 +1,68 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{pict2e}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage[rflt]{floatflt}
+\usepackage{graphicx,subfigure,epic,eepic}
+\usepackage[most]{tcolorbox}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\cfoot{}
+\usepackage[top=5mm,includehead,headheight=45pt,
+             left=1.5cm,bottom=2cm,right=1.5cm,headsep=0.3cm]{geometry} 
+
+%inkscapestuff
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+
+
+
+
+\title{Idk }
+\author{va}
+
+\begin{document}
+\maketitle
+
+\section{An effective network reduction approach to find the dynamical repertoire of discrete
+dynamic networks}
+
+The abstract says that the paper is about relating network strucutre with its dynamics. 
+It mentions finding certain motifs and predicting the behaviour of the entire network based on those motifs. 
+
+General asyncrhonus updating method samples through all possible timescales and hence results in a steady state distribution which is invariant to change in rate of reactions. 
+
+
+In order to reduce the network, it says frozen nodes are removed, but what about the roles these nodes dynamically play?
+
+This mentios something called thomas' rule which says inorder to have mlutisability you need to have positive feedback loops and that inorder to have cycles, you need to have negative feedback loops.
+
+Extended boolean networks: They try to get rid of negative edges and and AND boolean fuction by introducing special nodes. Don't know how that helps yet 
+
+I do not know what SCCs are and what this paper actually does. 
+
+
+\section{The topological requirements for robust perfect
+adaptation in networks of any size}
+
+\end{document}
+

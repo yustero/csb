@@ -1,0 +1,102 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{pict2e}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage[rflt]{floatflt}
+\usepackage{graphicx,subfigure,epic,eepic}
+\usepackage[most]{tcolorbox}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\cfoot{}
+\usepackage[top=5mm,includehead,headheight=45pt,
+             left=1.5cm,bottom=2cm,right=1.5cm,headsep=0.3cm]{geometry} 
+
+%inkscapestuff
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+
+
+
+
+\title{Reading: Low dimensionality of phenotypic space as an emergent property
+of coordinated teams in biological regulatory networks
+}
+\author{Vai}
+
+\begin{document}
+\maketitle 
+\begin{itemize}
+
+\item  In differentiation events, for example, the cells move from a high-entropy
+progenitor phenotype to a low-entropy differentiated phenotype. 
+
+What does entropy here mean?
+\item Recently,
+Tripathi et al. showed that most of the variance in the phenotypic space emergent from the regulatory
+networks is explained by the first principal component of the steady state space.
+
+\item As demonstrated
+in our previous work, the influence matrix generated from this network (that takes a weighted sum
+of direct and indirect interactions between each node pair) contains a higher-order toggle switch. We
+refer to each “supernode” (collection of similarly behaving nodes) in this toggle switch as a “team”
+consisting of a set of nodes positively influencing each other and negatively influencing the nodes of
+the other team (Figure 1A).
+
+\item We then performed principal component analysis over the collection of all steady states obtained
+for this network. When the solutions are plotted along the first and second principal component axes,
+we found the steady states separated into 3 clusters (Figure 1C, i). Analyzing the expression patterns
+of the steady states forming these clusters revealed that the two prominent clusters were the
+epithelial and mesenchymal phenotypes. In contrast, the smaller cluster showed a mixed expression
+of epithelial (E) and mesenchymal (M) nodes and hence could be classified as the hybrid
+
+\item we hypothesized that the relative weights of node
+expressions that make up the PC1 axis could be driven by the two-team structure in the network. To
+verify this hypothesis, we looked at the composition of the PC1 axis (using the node coefficients of
+PC1) and compared it against the composition of teams (Figure 1D, nodes belonging to different
+teams are colored differently). In line with our hypothesis, we see that the PC1 contribution of nodes
+belonging to different teams has opposite signs and that belonging to the same team has the same
+sign. Together these results support the hypothesis that team structure leads to PC1 explaining most
+of the variance in steady-state space.
+An immediate implication of the above hypothesis would be that in the absence of strong teams,
+the PC1 axis would no longer be able to explain the majority of the variance in the steady-state space.
+To test the validity of this implication, we generated random networks by swapping many pairs of
+edges in the network (Figure 1E, i)). We have previously shown that such randomization can disrupt
+the team structure and thus the stability and frequency of E, M, and H phenotypes (Figure 1E, ii). 
+
+\item Does RACIPE switch nodes? 
+
+
+\item  A scatter plot
+between the team strength of the random and WT networks against the variance explained along the
+PC1 axis (Figure 2A, ii) revealed a positive correlation between the two measures, suggesting that an
+increase in team strength can lead to a corresponding increase in the variance explained by PC1. An
+important observation here is the sigmoidal nature of the data. After a team strength of about 0.25-3,
+the variance explained by PC1 starts to saturate.
+
+Does this explain the redundancy? 
+
+
+\item \textbf{ Question: } The clustering represents bimodal distriubtion caused due to negative regulation of both teams. What kind of distribution would positive regulation induce and here it is shown that there is a very strict bimodal distrbution. Could postive regulation within teams somehow influence the spread of the two modes?
+
+\end{itemize}
+\end{document}
+	

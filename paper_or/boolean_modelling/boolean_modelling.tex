@@ -1,0 +1,179 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{pict2e}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage[rflt]{floatflt}
+\usepackage{graphicx,subfigure,epic,eepic}
+\usepackage[most]{tcolorbox}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\cfoot{}
+\usepackage[top=5mm,includehead,headheight=45pt,
+             left=1.5cm,bottom=2cm,right=1.5cm,headsep=0.3cm]{geometry} 
+
+%inkscapestuff
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+
+
+
+
+\title{Boolean Modelling}
+\author{Va}
+
+\begin{document}
+\maketitle
+
+
+Boolean modelling results the "boolean" properties of the network. However other types of modelling can result in different sets of hidden properties network possesses with respect to that modelling formalism. 
+
+Boolean modelling is somewhat interesting since it eliminates the need for requirement of dynamic parameters since in the case of gene regulatory networks, the combination of dynamic parameters results in pretty much two kinds of beaviours approximately, there is some sort of canalization just in terms of the kinetic parameters as well. 
+
+There are several ways to discretize and model what we have or rather different boolean formalisms. 
+
+\begin{itemize}
+
+\item Synchronus 
+
+\item Asynchronus 
+
+\item Threshold Boolean networks 
+
+\item Petri nets 
+
+\item P systems 
+
+\item Reaction diffusion systems 
+
+\end{itemize}
+
+Gene regulating networks are canalizing but since the output space is limited then the network must either sit steady on an attractor or form a cycle. Thefore you can charaterize a function on the basis of how fast it leads to an attractor if it does and how many attractors are there, how many loops are there. 
+
+
+Boolean formalism helps us to understand several centrality measures. What would date hubs mean here?
+
+In order to have feedback loops you need outward nodes. 
+
+
+Now when it comes to defining the boolean function, two transcription factors could be simultaneously needed for a node to become active, or rather be joined vi a an and function. When there's independent activation then OR operator could capture the boolean function.
+
+
+Asynchronous and stochastic update leads to non deterministic functions while synchronys leads to a deterministic trijectory. 
+
+Apparently updating schemes have a considerable effect on the dynamics of the system. 
+
+For some reaso whe nthere is no information to inform the choice of update scheme, updaing one node at a time is the most effective choice. 
+
+
+Basin of attractors. Ideally one might want to map the basin and would expect nearby states to have the same attractor. 
+
+
+One might think of the map from state space repertoire to attractors and think about the dimensionality, basis etc if they mean anything in this biological context. 
+
+
+attractors of a synchronus model has disjoing basins of attraction. The basin of attraction od ifferent attrators in stochastic aynchronus models may overlap. 
+
+An interesting question is how does the formalism restrict the possible solutions? And what restrictions does just the update function and asynchronus update function imposes on the possible steady states/solutions or does it allow all sorts of solutions to exist. 
+
+synchronus models may exhibit limit cycles which are not present in the corresponding asynchronus models
+
+The steady states are solutions of a certain equation??
+
+One could use network reduction techniques and get rid of edges which don't add much meaning. 
+
+Iteratively absorbing nodes without a self loop was proven to preserve the fixed points of a system.
+
+State transition graph: Nodes are the states of the system and the edges denote the allowed transitions among the states according to the chosen ypdating scheme. 
+
+We could also look into initial nodes which could give rise to both terminal phenotypes.  The lack of such intersections might indicate robustness in some way. 
+
+
+Network reduction
+
+
+\section{Concepts in Boolean Network Modeling: What do they all mean?}
+After considering different variants of asynchronyus updating, it was found that synchronus update was more suitable for checking robustness. Something called temporal BN exteinsion allows modling on different interactions and timescales while maintaining the deteministic nature of synchronus BNs. 
+
+A variety of different update strategies for asynchronus BNs ami to limit the burst of different dynamics emerging from the asynchronus paradigm. 
+
+probabilistic BNs allow for alternative boolean functions for each component. The update mechanism is synchronus and the boolean function fo each component is drawn according to its probability before each state transition. 
+
+
+Biological networks exhibit modularity. A large number of biological networks also exhibit scale free property. This topology has significant effects on robustness. 
+
+Regulatory functions in biological networks are monotone? What does this mean?
+
+Probabilistic boolean networks allow complex attractors as synchronus ones?
+
+Characterising initial states which lead to different basins and then characterising such basins might be a metric which might indicate hybridness
+
+
+Regulatory systems can be seen as information processing units. Each regulatory system is capable of processing a certain amount of information. Information theoretic measures are used frequently to sutdy the regulatory mechanisms insid eBNs/ The complexity of the information that a sytem can process highly depends on the partitioning of the state graph. Entropy was introduced as a measure of uncertannity about the dynamic behaviour of BNs. The higher the enttropy, more information is required to determine the future behaviour of the network. 
+
+Something called mutual informatoin is used in BNs to measure the propagation of infomration through the regulatory network. In something called REVEAl algorithm, thei msaure is used to reconstruct Bns from time series of biological data. 
+
+In a study it was shown that canalysing functions maximize the mutual information in boolean networks. 
+
+
+
+There's data driven modeling which uses experimental data to construct boolean networks. 
+
+Something called random boolean networks is also there. I do not understand this well. 
+
+
+Ensemble approach refers to sampling the networks which satisfy what we're looking for out random networks and find design principles there. 
+
+In synchronus update, many attractors are artefacts of the update function and are not robust to perturbations. 
+
+
+A kind of perturbation could be fixing a node to a certain state, or rather forcing it to be always on and see what happens. 
+
+
+\section{Attractor analysis of asynchronus boolean models of signal transudciton networks}
+
+
+This paper is about comparing different update formalisms. 
+
+Most of the studies about asynchronus boolean models have mainly focused on finding the fixed points of the system or on identifying the fixed points rechable from the nominal inital condigion. Very few studies set theri goals to identify cycles and no study that we are aware of provides a thorough exploration of the basin of attraction of cycles.
+
+
+
+The paper aims to model a network with some nodes oscillating using three different asynchronus updating tecniques: Random order asynchronus, General asynchronus and deterministic asynchronus methods. In deterministic async method nodes are updated only at multiples of their corresponding pre selected time units. 
+
+
+In synchronus update boolean models, the basins of attractions of different attractors do not intersect. Which means that asynchrony is essential for intersecting basins of attractions. Is stochasticity or noise essential for intersection of basins? 
+
+This allows me to think of EMT networks as networks which absorb noise to a certain extent but beyond a certain extent they just fall into another basin. 
+
+Fixed points are identical in sync and async 
+
+Something called loose attractor exists in ansynchronus models. 
+
+An attractor is called a loose attractor if for all possible states S of the state space of the network belonging to A, all possible successor states of S also belong to A. A loose attractor is equilvalent to a strongly connected component. Some confusion about it being a complex loop and not an attractor. 
+
+
+
+Most boolean networks and especially boolean models of signal transudctoin networks with a steady signal contain nodes whose state stabilizes in an attracting state after a transient period whether or not the system as whole has a fixed point attractor. The attracting states of these nodes can be quickly figured out by an inspectoin of their boolean updaing functions. This is interesting, how?
+
+We can concentrate on the dynamics of the subnetwork consisting of only. As the stabilization depends on the boolean rules only, different asyncrhonus methods can only differ in the duratoin of the transient period. Therefore we concentrate on the dynamics of the sub-network  consisting of only those nodes with non stationary behaviour and use the steady states of the stationary ndoes in the boolean rules governing the state tranistions of the fluctating nodes. As a second simplification, we collapse equivalent nodes and edges in the network to reduce it to a size with a managable state space. This way we obtain complementary views on the state space. 
+\end{document}
+

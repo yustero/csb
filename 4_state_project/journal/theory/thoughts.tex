@@ -1,0 +1,58 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{pict2e}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage[rflt]{floatflt}
+\usepackage{graphicx,subfigure,epic,eepic}
+\usepackage[most]{tcolorbox}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\cfoot{}
+\usepackage[top=5mm,includehead,headheight=45pt,
+             left=1.5cm,bottom=2cm,right=1.5cm,headsep=0.3cm]{geometry} 
+
+%inkscapestuff
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+
+
+
+
+\title{Multi State Boolean Formalism}
+\author{Let's see}
+
+\begin{document}
+\maketitle
+
+\section{My three state formalism }
+What does it do? It shuts off the noisy nodes, that is if the sum is less it doesn't allow its expression. Naturally having three possible states results in way more steady states with the old ising formalism but completely getting rid of the noisy nodes filters hybrid states massively. So what does the noisy recusive term mean in the entire range of simulation? I don't know. 
+
+What is the point of multi level formalism? 
+
+If the point is to somehow reduce the influence of nodes with lesser sum then shouldn't we make the nodes with 0 sum have 0 or state with lesser influence rather than its previous state which could be anything. Noisy nodes are somewhat independent. Kishore said that there's on reason in biology to supress noisy nodes but we can do that using modelling and supression of noisy nodes just states that the topology has a heavier weight on the steady state distribution. 
+
+
+Now how to build up from three state to multi state 
+
+\end{document}
+
+

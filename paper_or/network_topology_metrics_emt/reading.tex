@@ -1,0 +1,147 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{pict2e}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage[rflt]{floatflt}
+\usepackage{graphicx,subfigure,epic,eepic}
+\usepackage[most]{tcolorbox}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\cfoot{}
+\usepackage[top=5mm,includehead,headheight=45pt,
+             left=1.5cm,bottom=2cm,right=1.5cm,headsep=0.3cm]{geometry} 
+
+%inkscapestuff
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+
+
+
+
+\title{1
+Network Topology Metrics Explaining Enrichment of
+Hybrid Epithelial Mesenchymal Phenotypes in Metastasis}
+\author{}
+
+\begin{document}
+\maketitle
+
+\href{https://www.biorxiv.org/content/10.1101/2022.05.16.492000v1.full.pdf}{}1
+Network Topology Metrics Explaining Enrichment of
+Hybrid Epithelial Mesenchymal Phenotypes in Metastasis 
+
+\section{Abstract}
+\begin{itemize}
+
+\item Gene regulatory networks 
+
+\item Which network topological signatures enrich for hybrid E/M phenotypes across GRNs. It was found that increasing negative feedback loop sengances the byridness of these networks but increasing the postive feedback loops or their specfic combinations can decrease the frequency of hybrid E/M pheotype. This paper tries to find the network signatures which relate to/ give rise/prevent emergence of hybrid E/M phenotype in GRNs underlying EMP.  
+
+\end{itemize}
+
+\section{Introduction}
+
+\begin{itemize}
+
+\item the hybrid E/M phenotype remains relatively poorly
+characterized. Recent efforts have identify some individual factors that can stabilize hybrid E/M
+phenotype(e) such as GRHL2, SLUG, NRF2, miR-129 and NFATc – referred to as the ‘phenotypic
+stability factors’ (PSFs) (Hong et al. 2015; Bocci et al. 2019; Silveira et al. 2020; Subbalakshmi et
+al. 2020, 2021; Norgard et al. 2021). However, these investigations focus on a handful of molecules
+at a time, thus overlooking how hybrid E/M phenotype can emerge as a function of network
+topology of the underlying GRN(s).
+
+\item Our discrete (parameter-independent) and continuous (parameter-agnostic) simulations suggest that rather
+than being the outcome of tuning the expression of a particular PSF, hybrid E/M phenotype can
+emerge due to collective interactions among the genes in these GRNs. 
+
+\item  In addition, we analysed five large-scale networks (Fig 1A iii, Fig
+S1). Each network is labelled with the number of nodes and edges in the network (ex: 4N 7E for
+the smallest network). We then simulated these networks and their single edge perturbations in
+which an edge is either deleted or its sign is reversed, i.e. an activatory (resp. inhibitory) edge is
+replaced by an inhibitory (resp. activatory) one (Fig 1B). These simulations are done using two
+complementary methods: a parameter agnostic, ordinary differential equation (ODE) based model
+– RACIPE (Huang et al. 2017), and a parameter-independent Boolean (logical) model using
+asynchronous update
+
+
+\item define the
+‘hybridness’ of a network as fraction of steady state frequencies that can be classified as hybrid
+E/M (see details in materials and methods).
+
+\item When simulated using the Boolean formalism, the
+hybridness of WT networks was near the median of the distribution for all networks (Fig S2). These
+results suggest that while WT EMP networks may have low hybridness intrinsically, minor (single-
+edge) perturbations in network-topology can altogether increase or decrease the hybridness in
+these networks. 
+
+\item What I find interesting is, this is just single edge pertubation which is achieving this. I need to think of how much and what kind of pertubations should be used. 
+
+\item Jenson shanon divergence measures the difference in entropy in two probability distributions. It lies between 1 and 0 with 0 indicating identical distributions. 
+
+\item It has been found that positive JSD is correlated with increase in hybridness. I don't know how it fits in with the fact that WT networks have median hybridness compared to perturbed ones. Here JSD is measured relative to WT networks 
+
+\item J metric: I do not understand what this is exactly but as per the paper it is a measure of cohesion of in expression levels between nodes of a network. It is estimated using the Pearson correlation matrix obtained by considering the steady state levels accross the parameter sets. The absolute sum of all values in the upper triangle of the correlation matrix is taken as J metric in a given network 
+
+\item It was found that the J metric is negatively correlated to hybridness 
+
+\item What I find really interesting in this is that we can take two mathematically distinct and disjoint metrics and still play with them using correlation and stuff. This way of doing things is kinda cool. Out of the metrics we study how many actually have a strict mathematical relationship with each other? Is it possible to come up with "independent" metrics in the truest sense which still show some correlation? 
+
+
+
+
+
+
+
+
+
+\end{itemize}
+
+\section{Multistability increases with decrease in hybridness}
+\begin{itemize}
+
+\item Multistability is defined here as fractoin of parameter sets which lead to certain specific solutions. Hybrid networks have less multistablity owing to more plastic behaviour but the definition kind of blurs a distinction between two cases where a hybrid cell has a lot of sub-stable solutiosn and many parameter sets cumutatively reach those substable slolutions to a network where it has veryless substable solutions and a same number of parameter sets reach the single solution. According to the definition in the paper and my understanding of it. Both must have same multistability, don't know if this is intentional. Moreover how to identify the bins of stable parameter sets here? 
+
+
+\item Frustration for an edge $ J_{ij} $ between nodes $ S_i $ and $ S_j $ to be frustrated if 
+	\[  sgn(J_{ij}) \cdot sgn(s_i) \cdot sgn(s_j) = -1                    \]The sign of an edge is + or - depending on weather it is activatory or inhibitory. The sign of the nodes is + or - depending on weather it is being inhibited or activated by all the other edges connected to it. Frustratoin is then defined to be the fraction of edges that are frustrated in a particular state S 
+
+
+
+\item For a given network among all states, we can measure minimum, maximum and average frustration. It was found that hybridness is associated with only average and minimum frustration of a network. This could be \textit{ because (yes, there can be a reason for this) } pertubation affect the least frustrated states. 
+
+\item It was found that frustration is correlated to frequency of short length negative feedback loops. It was used as predictor of frustration which is interesting and cool
+
+\item Abundance of PFLs was negatively correlated with hybridness.
+
+\item When weighted PFL and NFL fraction was taken into account, it showed better correlation for NFLs and worse correlation for PFLs 
+\end{itemize}
+
+
+\section{Higher order measures of feedback loops correlate better with hybridness}
+
+\begin{itemize}
+
+\item Influence matrix : This is a transformation of interaction matrix. It takes into account the influence of each node in the network on the other nodes mediated through direct as well as indirect edges with weights attahed to hte indirect edges based on length of corresponding paths.    
+\end{itemize}
+\end{document}
+

@@ -1,0 +1,125 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{pict2e}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage[rflt]{floatflt}
+\usepackage{graphicx,subfigure,epic,eepic}
+\usepackage[most]{tcolorbox}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\cfoot{}
+\usepackage[top=5mm,includehead,headheight=45pt,
+             left=1.5cm,bottom=2cm,right=1.5cm,headsep=0.3cm]{geometry} 
+
+%inkscapestuff
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+
+
+
+
+\title{read:Phenotypic heterogeneity driven by plasticity
+ The rights exclusive Authors, reserved;
+ licensee
+ some
+of the intermediate EMT state governs disease
+ American for the Advancement
+ Association
+progression and metastasis in breast cancer
+}
+\author{V}
+
+\begin{document}
+\maketitle
+
+\begin{itemize}
+
+\item Two network interpretations were analysed one was \textit{ continuous state space boolean model  } and RACIPE. The latter approach is more useful for measurements of plasticity (why?). The former model allowed extensive investigations of robusness in phenotypic heterogeneity. There's a statement which says 'robusness is governed by the number of positive and negative feedback loops embedded in the networks'. Using a combination of number of negative and positive feedback loops, a metric was identified which could explain the robusness of \textit{ these } networks. 
+
+	The metric enabled identification of fragilities in the network without simulations
+
+\item It is found that the number of positive and negative feedbacl loops in the system govern the extent of robusness in the phenotypic distribution and plasticity. Is it just correlation or was causation established? 
+
+\item In this paper plasticity is defined as the fraction of parameter set which lead to multistable states. 
+
+\item Now to measure if two distributions of phenotypic heterogeneity are same or different, if different then how different, we use JSD. To measure the change in Plasticity, a fold change formula is used. For networks 1 and 2 the fold change is defined as follows 
+
+	\[  min( \frac {p1} {p2}, \frac {p2} {p1}                      \]
+Where p1 and p2 are plasticity measures of both the networks.
+The direction of change isn't investigated above. 
+
+
+\item Given our hypothesis that the network topology can lead to robustness in EMP, if we generate random network topologies of similar sizes as that of EMP networks and subject them to dynamical perturbations, the average change in outputs obtained should be more than that of EMP networks. Hence, we generated three sets of 100 random networks. 
+
+	So what this paragraph says that upon perturbations the change in phenotypic space is less for WT networks compared to randomly generated networks indicating robusness which is a bit interesting. Imagine a random network with a lot of phenotypic plasticity then maybe even after perturbations there might not be any change in phenotypic plasticity. 
+
+
+\item In boolean formalism they couldn't define plasticity in the way they defined it for RACIPE, therefore only robustness in phenotypic distribution could be studied. How did they define phenotypic plasticity? Ah, so this is a deterministic system therefore same inputs should give same output if nothing is changed. 
+
+
+\item \textbf{ What if, somehow, we insert stochasticity into the outcomes and make it such that the sytem isn't completely deterministic but rather is probabilistic }
+
+
+\item Dissimalirity between the steady state distributions was found in both frameworks and it was really large. It could mean that there is a lack of dynamic robusness in EMP networks( why?). 
+
+\item They tried to get rid of the confounding variables and made the state space for boolean formalism continuous. 
+
+
+\item For robusness, first single edge perturbations were used then 
+
+\item It was shown that average fold change in both random and WT networks for perturbation of upto E edges was double the fold change caused due to perturbations in single edges hence they decided to only consider the perturbations in single edges. 
+
+\item After characterizing dynamical and structrual robusnes sin the EMP networks they explored network chracteristics that lead to robusness in EMP. PFL play a major role in the stability of biological networks. The paper about network signatures claimed that negative feedback loops lead to hybrid behaviour. 
+
+\item PFLs make the networks more robust but in different cases it might be better to consider PFLs instead of NFLs or vice versa while looking at changes 
+
+\item How was it understood that positive feedbacl loops increase robustness and why do they increase plasticity too? 
+
+\item \textbf{Plasticity?   } \href{https://www.nature.com/articles/s41540-020-0132-1}{reference paper} This mentions that "plasticity" is necessary for cancer cells since it helps them evade drugs. This refers to epithelial to mesenchymal switch but also hybird states too. Therefore higher plasticity can imply the existence of hybrid states
+
+As per the paper phenotypic plasticity is the ability of cells to sample through multiple stable states. 
+
+With RACIPE, for a particular set of parameters and multiple initial conditions some parameters almost always result in a single steady state while others don't. The fraction which results in multiple steady state defines the plasticity score 1 of the network.
+
+Plasticity score 2 intends to distinguish between epithelial and mesenchymal states and I think it measures the expression levels of epithelial and mesnchymal markers and then distinguises different phenotypes based on that and then measures multistability or rather fraction of parameters which result in different states. 
+
+There was no overlap between the networks with highest JSD and the networks with highest or lowest PS1 or PS2. Therefore JSD is not a good predictor for change in phenotypic plasticity. 
+
+Therefore, Plasticity is sort of unrrelated to the difference in steady state distribution from WT networks. In the paper it was realised that upon removal of positive feedback loops plasticity reduces. 
+
+
+\item For some reason only fold change in plasticity was considered. I do not understand why since the way its presented it appears that it should've been a bit easier to just consider the change in plasticity. Thefore we could analyse the direction of change in plasticity upon perturbations. 
+
+	What might it be? My guess is that initially it shouldn't change much but after a bit it should increase and that is when heterogeneity should start appearing.
+
+
+\item Characterizing plasticity by idnetifying the specific phenotypes each parameter set is capable of accessing. Like PS 2 and finding out how changes in plasticity change the frequency of hybrid phenotypes. Apparently preliminary analysis shows an increase in hybrid phenotypes as plasticity decreases but should there be correlation at all? 
+
+\item More measures need to be developed that take into account the location ,degree of interactoin between different feedback loops to more effectively understand which loops must be disrupted for maximum effect. Other topological factors such as high interconnectivity, redundancym and degree distribution can also influence robustness. 
+
+\end{itemize}
+
+\subsection{Questions:}
+Why do we need robustness in terms of plasticity? What optimality does specific plasticity in the network provide?
+
+\end{document}
+

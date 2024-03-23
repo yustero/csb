@@ -1,0 +1,144 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{pict2e}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage[rflt]{floatflt}
+\usepackage{graphicx,subfigure,epic,eepic}
+\usepackage[most]{tcolorbox}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\cfoot{}
+\usepackage[top=5mm,includehead,headheight=45pt,
+             left=1.5cm,bottom=2cm,right=1.5cm,headsep=0.3cm]{geometry} 
+
+%inkscapestuff
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+
+
+
+
+\title{Network Science Barabsi }
+\author{Vaibhav Anand}
+
+\begin{document}
+\maketitle
+
+\section{Introuduction}
+\subsection{Motivation}
+
+Networks are found in many places hence I'd be interested if they offer something to the pack and how can indivisual nodes with simple behviour can form networks with complex behaviour or vice versa. How can indivisual nodes interact with each other and form a network which could potentially increase the "total" action more than each indivisual nodes combined and how can such behaviour be quantified. Can some general principles be inferred or is it too dependent on how indivisual nodes behave?  
+
+\subsection{Identity of a network}
+We can define a network using the number of nodes it has and the number of links. The links of a network can be \textbf{ directed } or \textbf{ undirected }. Networks can be both directed and undirected. 
+
+A key property of each node is its \textbf{ degree } representing the number of links it has with other nodes. 
+
+In an undirected graph we have, 
+
+\[  \textbf{ Links } = \frac {1} {2} \sum_{ i=1 } ^ { N} k_i                    \]
+where $ k_i $ represents the degree of i'th node
+Average degree for an equivalent undirected network is 
+$ \langle k \rangle = \frac {1} {N} \sum_{ i = 1 } ^ { N} k_i = \frac {2L} {N}  $
+
+In a directed network you've to distinguist between incoming degree i and outgoing degree o. The total degree $ k_{i'} = i+ 0 $  
+
+
+
+
+The total number of links in a directed network is 
+\[  L = \sum_{ i'=1 } ^ { N} i_{i'} = \sum_{ i= 1 } ^ { N} o_i                      \]
+
+The sum of indegrees is equal to the sum of out degrees. 
+Average degree of a directed network is $ \frac {L} {N}  $ 
+
+Teh \textbf{ degree distribution $ p_k $ } provides the probability that a randomly selected node in the network has degree k  	
+
+
+
+\section{Some metrics}
+
+\begin{itemize}
+
+\item Adjacency matrix 
+
+	This matrix keeps track of all the links. The adjacency matrix is such that $ A_{ij} = 1  $ if there is a link between i and j otherwise it's 0 for a undirected graph. 
+
+	The degree of a node of an undirected graph can be found by summing over either the rows or columns of the adjacency matrix
+
+	\[  k_i = \sum_{ j=1 } ^ { N} A_{ij} = \sum_{ i'=1 } ^ { N} A_{i' i}                    \]
+	
+For a directed network
+
+The in degree  $ = \sum_{ j = 1 } ^ { N} A_{ij} $ where $ A_{ij}  $ is 1 when there is a link from j to i. The out degree is $ \sum_{ i' = 1 } ^ { N} A_{i'i} $  
+We can make weighted adjacency matrices as well. 
+
+
+\item \textbf{ Bipartite Networks }
+
+It is a network whose nodes can be divided into two disjoint sets such thhat each node connects an element from one set to other. Essentially, there is no connection between two elements in a set. Similarly, multiparitite graphs can be defined. 
+
+
+\item Paths 
+
+	Shortest path between nodes i and j is the path with the fewest number of links. The shortest path is called the distance between nodes denoted by $ d_{ij}  $ 
+Diameter is the longest shortest path in a graph or the distance between the two furthest away nodes. 
+
+Average path length is a metric to study. We should be able to study a lot of other metrics we study of random data we're given. \textbf{ Look up a list of all the metrics of random data which can be studied }
+
+Self avoiding path is a path that doe snot intersect itself. 
+
+Eulerian path: A path that traverses each link eactly once 
+
+The difference between self avoiding path and eulerian path appears to be that self avoiding path avoids the same node but in eulerian paths you can start and end at the same node or rather you can have links sharing the same node. 
+
+Hamiltonian path: A path that visits each node exactly once. Looks similar to self avoiding path
+
+\item Connectedness and components 
+ Connectedness implies that the adjacency matrix can be written in a block diagonal form 
+
+ A component is a subset of nodes in a network so that there is a pth between any two nodes that belong to the component. \textit{ But one cannot add any more does to it that would have the same property } This basically mean you partition the network into two or more connected graphs or components. 
+
+\item Clustering Coefficient
+
+	It's the probability that two neighbors of a particular node have a link in between them boring stuff. 
+
+
+\item Global clustering coefficient 
+
+
+
+
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\end{document}
+

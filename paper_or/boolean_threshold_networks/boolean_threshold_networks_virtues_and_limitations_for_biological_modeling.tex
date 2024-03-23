@@ -1,0 +1,68 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{pict2e}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage[rflt]{floatflt}
+\usepackage{graphicx,subfigure,epic,eepic}
+\usepackage[most]{tcolorbox}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\cfoot{}
+\usepackage[top=5mm,includehead,headheight=45pt,
+             left=1.5cm,bottom=2cm,right=1.5cm,headsep=0.3cm]{geometry} 
+
+%inkscapestuff
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+
+
+
+
+\title{Ref: Boolean Threshold Networks: Vitrtures and Limitations for Biological MOdeling}
+\author{Vaibhav}
+
+\begin{document}
+\maketitle
+
+\section{Abstract}
+Threshold networks assume that gene regulation processes are additive but this contrasts the mechanism proposed by kauffman in which each of the logic function is carefully constructed to accurately take into account the comibnatorial nature of gene regulation. Kauffman boolean networks have been studied well but not much is known about threshold networks. 
+
+\section{Introduction}
+Some biological networks are modelled after the boolean functions are constructed after studying the combinatorial action of regulators on their target genes. This sounds really hard for larger networks.
+
+
+Under certain conditions gene regualtory interactions can indeed be considered as purely additive in such cases boolean models with threshold functions are useful to describe real genetic networks. 
+
+
+When the sum is equal to the threshold, whatever we've decided then the node regulates itself, what does it mean really? The paper says something about constructing a boolean function.  The paper says that this self regulation does not necessarily happen in \textbf{ Kauffman Boolean networks }. Integer threshold values allow the nodes to simplly stay in their previous state and essentially freeze plays a major part in the dynamical behaviour of the network and its use for biological modeling. 
+
+
+
+
+During the simulations, do you find some common checkpoints?? 
+
+
+This paper, on deeper analysis of the dynamics of Rns reveals anomalies inconsistent with the expected behavior of gene regulation models for biologically meaningul values of the parameters that have been used. .
+
+When the threshold value is 0 it is shown that the networks typically have an enormous amount of attractors. 
+\end{document}
+

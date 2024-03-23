@@ -1,0 +1,189 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{pict2e}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage[rflt]{floatflt}
+\usepackage{graphicx,subfigure,epic,eepic}
+\usepackage[most]{tcolorbox}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\cfoot{}
+\usepackage[top=5mm,includehead,headheight=45pt,
+             left=1.5cm,bottom=2cm,right=1.5cm,headsep=0.3cm]{geometry} 
+
+%inkscapestuff
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+
+
+
+
+\title{Landscape of epithelial–mesenchymal
+plasticity as an emergent
+property of coordinated teams in
+regulatory networks}
+\author{V}
+
+\begin{document}
+\maketitle
+\section{Introduction}
+
+IPhenotype: how do you define epithelial or mesenchymal phenotype? or phenotype in general? do you just go and identify a set of interrelated traits which are almost always found together
+
+Are there two unrelated epithelial and mesenchymal networks or are all epithelial markers connected. It looks that way since it's mostly binary. Are there markers which aren't part of the network? or rather factors without a direct or indirect connection.
+
+How exactly does hysteresis lead to cellular memory and what are other interesting outcomes from non linear interactions? 
+
+Can teams exist in other biological systems too? does it restrict the phenotypic space there? does it only have to be phenotype tho? could it not be a network involved in something else which just needs a binary outcome but again that counts as phenotype meh 
+
+\textbf{ Can the team strength be used to predict the frequency of different phenotypes without performing dynamic simulations? } what does this mean really? how do you define strength?
+
+''Third, our discrete parameter-independent and continuous parameter-agnostic simulations
+show that these ‘teams’ are integral to stabilizing epithelial and mesenchymal phenotypes, as demon-
+strated via various stability metrics. Thus, the hybrid epithelial/mesenchymal phenotypes were less
+frequent and less resilient to dynamic perturbations. Overall, we show that the strength of ‘teams’ in a
+regulatory network directly shapes the emergent largely bimodal phenotypic landscape, thus offering
+a network topology-based metric to identify phenotypic distributions without performing any simu-
+lations.''
+
+What does integral mean? are there other networks which show similar bistable behaviour. Moreover what constraint to a random network leads to formation of such teams?
+
+\section{Results}
+
+\begin{tcolorbox}[colback=yellow!5!white,colframe=yellow!50!black,
+  colbacktitle=yellow!75!black,title= ]
+  We chose to investigate a collection of five EMP networks that have been shown to be previously investigated
+via different simulation formalisms   
+\end{tcolorbox}
+
+Why are epithelial nodes all miRs and mesenchymal nodes named very differently. 
+
+
+\begin{tcolorbox}[colback=yellow!5!white,colframe=yellow!50!black,
+  colbacktitle=yellow!75!black,title= ]
+  We simulate
+the dynamics of these networks using a threshold-based, parameter-independent, Boolean formalism
+(Font- Clos et al., 2018), where each node can be either active (1) or inactive (–1). We define the state
+of a node as an array of –1s and 1s, where each element of the array depicts the activity of a node. The
+activity of each node is affected by the activity of all the incoming edges based on a majority rule, that
+is, if there are more inhibiting edges active, the node gets inactivated and vice versa 
+  
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[colback=yellow!5!white,colframe=yellow!50!black,
+  colbacktitle=yellow!75!black,title= ]
+This ensured that the in and out degrees of all nodes remain the same,
+but the way they are connected (network topology) changes  
+  
+\end{tcolorbox}
+How?
+What about when we let the in and out degrees to vary. What evolutinoary constraint requires that the only valid networks are the ones with same number of in and out nodes 
+
+
+\begin{tcolorbox}[colback=yellow!5!white,colframe=yellow!50!black,
+  colbacktitle=yellow!75!black,title= ]
+  The steady-state frequency (SSF) is calculated
+as the fraction of initial conditions that converge to the given steady state. We represent the SSF for
+each steady state as the width of the corresponding column. The epithelial and mesenchymal states
+account for >70\% of the SSF in four of the five EMP networks (Figure 1E). These results indicate the
+emergence of the experimentally observed uneven (bimodal) stability landscape
+  
+\end{tcolorbox}
+Does this refer to different one edges being off from their position and then still getting the same stable phenotypes or does it deal with a random network in general maybe with some constraint
+
+\textbf{ Coherence: }The fraction of perturbations that reverted to the original state P1 (3 out of 7
+balls) is calculated as coherence. 
+
+Sarle's bimodality coefficient? Spearmans correlation coefficient?
+
+How do you define and distinguish a steady state? do you just count the number of positive or negative nodes or do you define each node to be unique if yes then how do you order them on a number line and make a graph.
+
+
+\begin{tcolorbox}[colback=yellow!5!white,colframe=yellow!50!black,
+  colbacktitle=yellow!75!black,title= ]
+  As a metric, coherence provides the following advantages
+over SSF: (1) coherence is a perturbation-based measure and therefore provides a dynamic perspec-
+tive of the stability of the steady states. In EMP, coherence can be visualized as the effect of a weak
+EMT (Epithelial to Mesenchymal Transition)/MET (Mesenchymal to Epithelial Transition) -inducing
+signal. (2) Coherence being a local stability measure is less dependent on the other steady states of
+the network. Therefore, the absolute coherence values can be compared across networks, unlike SSF
+  
+\end{tcolorbox}
+hmm, does it deal with the ordering problem?
+
+What does minimum SSF mean?
+
+\begin{tcolorbox}[colback=yellow!5!white,colframe=yellow!50!black,
+  colbacktitle=yellow!75!black,title= ]
+ When comparing the patterns for minimum coherence, we observed similar trends for the 22N
+82E network (Figure 2E, columns 1 and 2) but not for 3 of the four remaining WT EMP networks
+(Figure 2—figure supplement 1A). Maximum and minimum SSF behave similarly to the coherence,
+that is, the WT maximum SSF is higher than most random networks. In contrast, minimum SSF is not
+consistent 
+  
+\end{tcolorbox}
+
+whut
+
+
+
+\begin{tcolorbox}[colback=yellow!5!white,colframe=yellow!50!black,
+  colbacktitle=yellow!75!black,title= ]
+  
+To quantify these trends better, we obtained percentiles for the WT values of all eight
+(four for coherence, four for SSF) of these metrics in the corresponding random network distributions
+(Figure 2H). The coherence bimodality coefficient of all five WT EMP networks is greater than 80%
+of the corresponding random networks. Similarly, we find the SSF bimodality coefficient to be higher
+than 75\% of the random networks in all cases except the networks of size 26N 100E. Furthermore, we
+find that the maximum coherence and maximum SSF for all five WT EMP networks are higher than at
+least 75\% of the corresponding random networks. Such a trend was not consistently seen for minimum
+and mean coherence and SSF values (Figure 2H). In WT EMP networks, the maximum coherence and
+SSF represent the terminal phenotypes, and minimum coherence and SSF represent the hybrid pheno-
+types.  
+\end{tcolorbox}
+
+
+What is all that fuss about team strength? what does it mean really ? 
+
+The EMP networks were quite sparce. 
+
+Pairs of nodes can influence each other not only directly but also directly. How do you put this into a boolean model. 
+
+
+
+Influence matrix? 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
